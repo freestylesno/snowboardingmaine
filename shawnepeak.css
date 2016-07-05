@@ -1,0 +1,94 @@
+
+	*
+		{
+		margin: 0;
+		padding: 0;
+		}
+	html, body
+		{
+			height: 100%;
+			background-image: url('imges/blue_blend.png');
+			background-repeat: repeat-x;
+			background-color: #a6cfed;
+		}
+	
+	#page
+		{
+			width: 1000px;
+			min-height: 97.5%;
+			height: auto !important;
+			height: 98%;
+			margin: 0 auto -25px;
+			background-color: white;
+			border: solid thick rgb(7,19,83);
+			padding-top: 10px;  /*for header image*/
+		}
+		
+	footer, .push
+	{
+		clear: both;
+		height: 25px;		
+	}
+	nav
+		{
+			padding-top: 10 px;
+			font-size: 24px;
+			padding-bottom: 5px;
+		}
+		
+	#content
+		{
+			margin-top: 15px;
+			width: 1000px;
+			padding-left: 10px;
+			padding-Right: 10px;
+			clear: both;
+		}
+		
+	#main
+		{
+			width: 600px;
+
+			padding: 6px;
+
+			float: left;
+
+			background-color: white;
+
+		
+		}
+		aside	
+			{
+				width: 350px;
+				float: left;
+				padding-left: 10px;
+			}
+		
+	footer
+		{
+			width: 1000px;
+			font-family: 'Book Antiqua';
+			text-align: center;
+			font-weight: bold;
+			font-size: 16px;
+			border-top: solid 3px rgb(7,19,83);
+			margin: auto;
+		}
+
+	a:link
+		{
+			font-size: 24px;
+			color: #4169E1; /*a bright blue*/
+			text-decoration: none;
+		}
+	a:visited
+		{
+			color: rgb(233,8,12); /*red*/
+			text-decoration: none;
+		}
+		
+			
+	a:hover
+		{
+			color: rgb(164,11,11); /* dark red */
+		}

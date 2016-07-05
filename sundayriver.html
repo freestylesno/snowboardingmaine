@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Sunday river</title>
+		<link href="snow_stylesheet.css" rel="stylesheet" type="text/css" />
+		<script type = "text/javascript" src = "javascripts/banner.js"></script>
+		<script type = "text/javascript" src = "javascripts/selectlist.js"></script>
+		<script type = "text/javascript" src = "javascripts/popups.js"></script>
+		<script type = "text/javascript" src = "javascripts/cookies.js"></script>
+	</head>
+	<body onLoad = "changePictures()">
+		<section id = "page">  <!-- starts page section -->
+		<p style = "text=align:center">
+			<!-- update image with one of sundayriver -->
+		<img src = " images/snowboardingmaine.png" width = "975" height = "100" alt = "Snowboarding Maine" title = "" />
+						</p>
+		<header> <!--start header -->
+				<div id = "banner">
+			<p style = "text-align: center">
+				<a href = "javascript:imageLink()"><img src "images/snowboarding1.png" name = "Banner" id = "Banner" width = "1000" height = "250" />
+			</p>
+			<nav> <!--start nav -->
+				<p style = "text-align:center">
+		<a href = "index.html"> Home</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = " sundayriver.html"> Sunday River</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "sugarloaf.html"> Sugarloaf</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "saddleback.html"> Saddleack</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "shawnepeak.html"> Shawne Peak</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "store.html"> Store</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "other.html"> Other mountains</a> &nbsp;&nbsp; 
+		</p>
+			</nav><!--end nav -->
+		</header>
+	
+	<section id = "content"> <!--content section-->
+		
+		<article id = "main"> <!-- start main article -->
+	<script type="text/javascript"> 
+	alert(chkLink("sundayriver"));
+		if (chkLink("sundayriver")){
+		document.write("<p> <a href='#' onClick='sundayriver()'> SundayRiver offical web page</a>");
+	}
+	</script>
+		</article>
+		
+		<aside> <!-- starts right article -->
+		<!--dropdown select image -->
+<form name = "Attractions">
+			<table width = "80%">
+				<tr>
+					<td colspan = "2" style = "text-align:center">
+						<h3>Select what you want to know more about.</h3>
+					</td>
+				</tr>
+				<tr> 
+					<td style ="verticle-align:text-top">
+						<select name = "attractionList" size = "1" onchange = "displayImages()">
+						<option value = "">Select Item </option>
+						<option value = "1">Lodging on the Mountian</option>
+						<option value = "2">Tickets</option>
+						<option value = "3">Local Town</option>
+						<option value = "4">Hours of operation</option>						
+					</select>
+				</tr>
+					</br>
+					</td>
+					<td style = "text-align:center">
+					
+						<img src="images/placeholder.png" name = "lense shot">
+						<br/><br/>
+						<textarea cols = "38" rows = "10" wrap = "virtual" name = "attractionDescription">
+							When you make a selection from the list, a complete description and the price will display in this window.
+						</textarea>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		</aside> <!-- ends rt article -->
+	
+	</section> <!-- ends section -->
+		
+		<div class="push"></div> <!-- for footer stickied -->
+		
+	</section> <!-- ends section page -->
+	
+		<footer>
+		
+		</footer>
+	
+	</body>
+</html>

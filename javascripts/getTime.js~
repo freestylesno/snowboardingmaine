@@ -1,0 +1,8 @@
+function displaytime(){
+//make date obj.
+var time =  new Date();
+//date/time mask
+time.format(hh:MM)
+//display date
+document.clock.time.value = time.toLocalString();
+}

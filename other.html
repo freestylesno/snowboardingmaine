@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>More Moutains</title>
+		<link href="snow_stylesheet.css" rel="stylesheet" type="text/css" />
+		<script type = "text/javascript" src = "javascripts/banner.js"></script>
+		<script type = "text/javascript" src = "javascripts/validate.js"></script>
+
+	</head>
+	<body onLoad = "changePictures()">
+		<section id = "page"><!-- starts page section -->
+		<p style = "text=align:center">
+			<img src = " images/snowboardingmaine.png" width = "975" height = "100" alt = "Snowboarding Maine" title = "" />
+						</p>
+		<header> <!--start header -->
+				<div id = "banner">
+			<p style = "text-align: center">
+				<a href = "javascript:imageLink()"><img src "images/snowboarding1.png" name = "Banner" id = "Banner" width = "1000" height = "250" />
+			</p>
+			<nav> <!--start nav -->
+				<p style = "text-align:center">
+		<a href = "index.html"> Home</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = " sundayriver.html"> Sunday River</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "sugarloaf.html"> Sugarloaf</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "saddleback.html"> Saddleack</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "shawnepeak.html"> Shawne Peak</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "store.html"> Store</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "other.html"> Other mountains</a> &nbsp;&nbsp; 
+		</p>
+			</nav><!--end nav -->
+		</header>
+	
+	<section id = "content"> <!--content section-->
+		<style type = "text/css">
+		form    {
+
+position:relative;
+width:550px;
+height:475px;
+line-height: 24px;
+font-weight: bold;
+color: #09C;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+
+}
+		input [type =  "text"]
+		{
+			margin-bottom: 10px;
+			margin-top: 10px;
+			color: "blue";
+			background-color: "lightblue";
+
+		}
+	
+		input[type = "submit"]
+		{
+			margin-left:100px;
+			margin-top: 5px;
+		}
+		input[type = "textarea"]
+		{
+			color: blue;
+			background-color: lightblue;
+		}
+		</style>
+
+		<article id = "main"> <!-- start main article -->
+		This is where the main content will be inserted.
+			
+		</article>
+		
+		<aside> <!-- starts right article -->
+		This is the right article location	
+		</aside> <!-- ends rt article -->
+	<h1 style = "padding-bottom: 20px">Moutain sugestion</h1></br>
+	<p>Do you have a sugestion for a moutain to be added to this site? Fill out the form below to have it added!</p>
+	<p>Please note: All fields are required.</p><br/>
+		<form name = "Sform" id = "Sform" onSubmit = "return valivateForm()">
+	<p>Moutain Name: <input type = "text" name = "Mname" id = "Mname" size = "30"/>
+	<p>Location (city/town): <input type = "text" name = "Locname" id = "Locname" size = "30"/>
+	<p>Opening date: <input type ="text" name = "Odate" size = "25"/> Format: mm/dd/yyyy </p>
+	<p> Please provide a breif description:</p>
+			<p>
+				<textarea name = "desc" id = "desc" rows = "10" cols = "50"></textarea/>
+			</p>
+
+		
+			Select moutain features:
+			<br/><input type = "checkbox" name = "features" id = "jumps" value = "jumps"/> jumps &nbsp;&nbsp;
+			<br/><input type = "checkbox" name = "features" id = "rails" value = "rails"/> rails &nbsp;&nbsp;
+			<br/><input type = "checkbox" name = "features" id = "moguls" value = "moguls"/> moguls &nbsp;&nbsp;
+			<br/><input type = "checkbox" name = "features" id = "glades" value = "glades"/> glades &nbsp;&nbsp;
+			<br/><input type = "checkbox" name = "features" id = "chairlift" value = "chairlift"/> chairlift &nbsp;&nbsp;
+			<br/><input type = "checkbox" name = "features" id = "Tbar" value = "Tbar"/> Tbar &nbsp;&nbsp;
+			<br/><input type = "checkbox" name = "features" id = "nothing" value = "nothing"/> Nothing, this is a trail in the middle of nowhere, but there is snow! &nbsp;&nbsp;
+	 		<p> 
+				<input type = "reset" value = "clear Form" />&nbsp;&nbsp; <input type = "submit" value = "Submit Form"/>
+			</p>
+
+	</section> <!-- ends section -->
+		
+		<div class="push"></div> <!-- for footer stickied -->
+		
+	</section> <!-- ends section page -->
+	
+		<footer>
+		
+		</footer>
+	
+	</body>
+</html>

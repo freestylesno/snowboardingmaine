@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Snowboarding in Maine</title>
+		<link href="snow_stylesheet.css" rel="stylesheet" type="text/css" />
+		<script type = "text/javascript" src = "javascripts/getTime.js"></script>
+		<script type = "text/javascript" src = "javascripts/traveltime.js"></script>
+		<script type = "text/javascript" src = "javascripts/banner.js"></script>
+		<script type = "text/javascript" src = "javascripts/selectlist.js"></script>
+		<script type = "text/javascript" src = "javascripts/homepageslideshow.js"></script>
+		<script type = "text/javascript" src = "javascripts/validate.js"></script>
+		<script type = "text/javascript" src = "javascripts/cookies.js"></script>
+
+		<script type="text/javascript">
+
+function validateName(){
+	var name = document.getElementById('txt_fullname').value;
+	var error_flag =  false;
+	if(name == ''){
+		var error_message = 'Name: Please enter your name\n';
+		document.getElementById('txt_fullname').style.backgroundColor = 'red';
+		error_flag = true;
+	}
+	else{
+		var validated_name = 'Hello ' + name + ' and welcome to Snowboarding Maine\n';
+		document.getElementById('txt_fullname').style.backgroundColor = 'white';
+
+	}
+	if(error_flag){
+		alert(error_message);
+	}
+	else{
+		alert(validated_name);
+	}
+}
+
+function setLinkCookies(){
+	
+	addCookie("saddleback",document.linkSelect.saddleback.checked);
+	addCookie("shawnePeak",document.linkSelect.shawnePeak.checked);
+	addCookie("sundayriver",document.linkSelect.sundayriver.checked);
+	addCookie("sugarloaf",document.linkSelect.sugarloaf.checked);
+	alert("preferences set")
+
+
+}
+
+function clearAll(){
+	addCookie("sundayriver",false);
+	addCookie("sugarloaf",false);
+	addCookie("saddleback",false);
+	addCookie("shawnePeak",false);
+}
+		</script>
+
+	</head>
+	<body onLoad = "setInterval('gettime()',1000); changePictures()">
+		<section id = "page"><!-- starts page section -->
+			
+		<p style = "text-align:center">
+			<img src = " images/snowboardingmaine.png" width = "975" height = "100" alt = "Sugarloaf Bracket Basin" title = "" />
+						</p>
+		<header> <!--start header -->
+			<!--TODO update banner with snowboarding images  remove old header add better image -->
+		<div id = "banner">
+			<p style = "text-align: center">
+				<a href = "javascript:imageLink()"><img src "images/snowboarding1.png" name = "Banner" id = "Banner" width = "1000" height = "250" />
+			</p>
+			<nav> <!--start nav -->
+				<p style = "text-align:center">
+		<a href = "index.html"> Home</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "sundayriver.html"> Sunday River</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "sugarloaf.html"> Sugarloaf</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "saddleback.html"> Saddleback</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "shawnepeak.html"> Shawne Peak</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "store.html"> Store</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+		<a href = "other.html"> Other mountains</a> &nbsp;&nbsp; 
+		</p>
+			</nav><!--end nav -->
+		</header>
+	
+	<section id = "content"> <!--content section-->
+		
+		<article id = "main"> <!-- start main article -->
+			<form name = "namewelcome" id = "namewelcome">
+			<p>
+				<label for = "txt_name">Enter your name:</label>
+				<input type = "text" name = "fullname" id = "txt_fullname" size = "40"/>
+			</p>
+			<p>
+		
+				<input type = "submit" name = "submit" id =  "btn_submit" value = "submit name" onClick = "validateName()" />
+			</p>
+
+		</form>
+
+		
+
+		<br><br>
+			<form id = "linkSelect" name = "linkSelect" id = "linkSelect" onSubmit = "return setLinkCookies()" onReset = "return clearAll()">
+				What moutains do you want to see quick links to there official sites?
+		<ul id = "links" style =  list-style-type: none;>
+			<li> <input type = "checkbox" class = "link" name = "sundayriver" id = "sundayriver" /> Sunday River</li>
+			<li> <input type = "checkbox" class = "link" name = "sugarloaf" id = "sugarloaf" /> Sugarloaf</li>
+			<li> <input type = "checkbox" class = "link" name = "saddleback" id = "saddleback" /> Saddleback</li>
+			<li> <input type = "checkbox" class = "link" name = "shawnePeak" id = "shawnePeak" /> Shawne Peak</li>
+				<input type  = "submit" id = "preferences" name = "preferences" value = "Set preferences"/>
+						<input type = "reset" name = "Reset" value = "Clear preferences" />
+
+						<br><br>
+		<h3>Snowboard in Maine!</h3><br>
+		The weather is nice.<br>
+		The views are beautiful.<br>
+		The adventure is great.<br>
+
+		</article>
+		
+		<aside> <!-- starts right article -->
+
+			<!-- add slideshow here update images to be that of snowboarding -->
+			<div>
+		<form name = "slideshow" id = "slideshow">
+			<p style = "text-align: center">
+				<img src="images/placeholder.png" alt ="lense shot" title = "lense shot" name =  "display" id = "display"/>
+			</p>
+			<p style = "text-align: center">
+				<table style="width:500px text-align: center">
+					<tr>
+					<td><input type = "button" name =  "button" id =  "button" value = "First Slide" onClick = "first()"; /></td> 	
+					<td><input type = "button" name =  "button" id =  "button" value = "Previous Slide" onClick ="movePrevious()"; /></td>
+					</tr>
+					<tr>
+					<td><input type = "button" name =  "button" id =  "button" value = "Next Slide" onClick = "moveNext()"; /> </td>
+					<td><input type = "button" name =  "button" id =  "button" value = "Last Slide" onClick = "last()"; /> </td>
+					</tr>
+				</table>
+			</p>
+		</form>
+		<br/>
+
+			</div>
+
+		<!-- clock displaying the time with AM or PM -->
+		<div id = "clock">
+				<form name = "tclock" id = "tclock" action = "#">
+					<p>
+					<h4>The time is:</h4>	<input type = "text" id = "time" name = "time" size = "5" />
+					</p>
+		
+				</form>
+		
+		<p>
+				<label for = "data"> Enter the travel time to the moutain:</label>
+				<input type = "text" name = "input_1" id = "first" size = "40"/>
+		</p>
+
+		<h4>If you leave now and it takes you 2 hours to get to the moutain you will arrive at:</h4>
+		<form name = "travel" id = "travel" action = "#">
+					<p>
+						<input type = "text" id = "arrival" name = "arrival" size = "15" />
+					</p>
+		
+				</form>
+				<script type = "text/javascript">
+			arrivaltime();
+		</script>
+				
+		</aside> <!-- ends rt article -->
+	
+	</section> <!-- ends section -->
+		
+		<div class="push"></div> <!-- for footer stickied -->
+		
+		
+	</section> <!-- ends section page -->
+	
+		<footer>
+		Todays date is 
+		<script type = "text/javascript">
+			var date = new Date();
+			document.write(date.toDateString());
+			</script>
+		</footer>
+	
+	</body>
+</html>
